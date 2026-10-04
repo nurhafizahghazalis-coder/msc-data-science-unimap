@@ -1,791 +1,790 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Master of Science in Data Science programme information, Faculty of Intelligent Computing (FKC), UniMAP.">
+  <meta name="description" content="Master of Science in Data Science programme information, Faculty of Intelligent Computing (FKC), UniMAP.">
 
-  <title>Master of Science in Data Science | Faculty of Intelligent Computing (FKC), UniMAP</title>
+  <title>MSc in Data Science | FKC, UniMAP</title>
 
 
 
-  <style>
+  <style>
 
-    :root{
+    :root{
 
-      /* Theme sampled from the image supplied by the user */
+      /* Theme sampled from the image supplied by the user */
 
-      --primary:#2EB49C;
+      --primary:#2EB49C;
 
-      --primary-dark:#177D70;
+      --primary-dark:#177D70;
 
-      --primary-soft:#EAF8F5;
+      --primary-soft:#EAF8F5;
 
-      --ink:#17312D;
+      --ink:#17312D;
 
-      --muted:#62736F;
+      --muted:#62736F;
 
-      --surface:#FFFFFF;
+      --surface:#FFFFFF;
 
-      --surface-alt:#F6FAF9;
+      --surface-alt:#F6FAF9;
 
-      --line:#DCE9E6;
+      --line:#DCE9E6;
 
-      --warning:#FFF6D8;
+      --warning:#FFF6D8;
 
-      --shadow:0 12px 32px rgba(23,49,45,.10);
+      --shadow:0 12px 32px rgba(23,49,45,.10);
 
-      --radius:18px;
+      --radius:18px;
 
-      --max:none;
+      --max:none;
 
-    }
+    }
 
 
 
-    *{box-sizing:border-box}
+    *{box-sizing:border-box}
 
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:smooth}
 
-    body{
+    body{
 
-      margin:0;
+      margin:0;
 
-      font-family:Arial, Helvetica, sans-serif;
+      font-family:Arial, Helvetica, sans-serif;
 
-      color:var(--ink);
+      color:var(--ink);
 
-      background:var(--surface-alt);
+      background:var(--surface-alt);
 
-      line-height:1.6;
+      line-height:1.6;
 
-    }
+    }
 
 
 
-    a{color:var(--primary-dark)}
+    a{color:var(--primary-dark)}
 
-    button,a{touch-action:manipulation}
+    button,a{touch-action:manipulation}
 
 
 
-    .topbar{
+    .topbar{
 
-      position:sticky;
+      position:sticky;
 
-      top:0;
+      top:0;
 
-      z-index:1000;
+      z-index:1000;
 
-      background:rgba(255,255,255,.96);
+      background:rgba(255,255,255,.96);
 
-      border-bottom:1px solid var(--line);
+      border-bottom:1px solid var(--line);
 
-      backdrop-filter:blur(10px);
+      backdrop-filter:blur(10px);
 
-    }
+    }
 
 
 
-    .nav{
+    .nav{
 
-      width:100%;
+      width:100%;
 
-      max-width:none;
+      max-width:none;
 
-      margin:0;
+      margin:0;
 
-      min-height:72px;
+      min-height:72px;
 
-      padding:10px 22px;
+      padding:10px 22px;
 
-      display:flex;
+      display:flex;
 
-      align-items:center;
+      align-items:center;
 
-      justify-content:space-between;
+      justify-content:space-between;
 
-      gap:18px;
+      gap:18px;
 
-    }
+    }
 
 
 
-    .brand{
+    .brand{
 
-      display:flex;
+      display:flex;
 
-      align-items:center;
+      align-items:center;
 
-      gap:12px;
+      gap:12px;
 
-      text-decoration:none;
+      text-decoration:none;
 
-      color:var(--ink);
+      color:var(--ink);
 
-      min-width:250px;
+      min-width:250px;
 
-    }
+    }
 
 
 
-    .brand-mark{
+    .brand-mark{
 
-      width:42px;
+      width:42px;
 
-      height:42px;
+      height:42px;
 
-      border-radius:12px;
+      border-radius:12px;
 
-      background:var(--primary);
+      background:var(--primary);
 
-      display:grid;
+      display:grid;
 
-      place-items:center;
+      place-items:center;
 
-      color:white;
+      color:white;
 
-      font-weight:800;
+      font-weight:800;
 
-      box-shadow:0 8px 18px rgba(46,180,156,.25);
+      box-shadow:0 8px 18px rgba(46,180,156,.25);
 
-    }
+    }
 
 
 
-    .brand-text strong{display:block;font-size:15px;line-height:1.25}
+    .brand-text strong{display:block;font-size:15px;line-height:1.25}
 
-    .brand-text span{font-size:12px;color:var(--muted)}
+    .brand-text span{font-size:12px;color:var(--muted)}
 
 
 
-    .navlinks{
+    .navlinks{
 
-      display:flex;
+      display:flex;
 
-      flex-wrap:wrap;
+      flex-wrap:wrap;
 
-      justify-content:flex-end;
+      justify-content:flex-end;
 
-      gap:6px;
+      gap:6px;
 
-    }
+    }
 
 
 
-    .navlinks a{
+    .navlinks a{
 
-      text-decoration:none;
+      text-decoration:none;
 
-      color:var(--ink);
+      color:var(--ink);
 
-      font-size:13px;
+      font-size:13px;
 
-      font-weight:700;
+      font-weight:700;
 
-      padding:9px 10px;
+      padding:9px 10px;
 
-      border-radius:10px;
+      border-radius:10px;
 
-    }
+    }
 
-    .navlinks a:hover,.navlinks a:focus{background:var(--primary-soft);color:var(--primary-dark)}
+    .navlinks a:hover,.navlinks a:focus{background:var(--primary-soft);color:var(--primary-dark)}
 
 
 
-    .hero{
+    .hero{
 
-      min-height:78vh;
+      min-height:78vh;
 
-      display:flex;
+      display:flex;
 
-      align-items:center;
+      align-items:center;
 
-      background:
+      background:
 
-        radial-gradient(circle at 85% 10%, rgba(255,255,255,.22), transparent 30%),
+        radial-gradient(circle at 85% 10%, rgba(255,255,255,.22), transparent 30%),
 
-        linear-gradient(135deg,var(--primary) 0%, #23A98F 58%, var(--primary-dark) 100%);
+        linear-gradient(135deg,var(--primary) 0%, #23A98F 58%, var(--primary-dark) 100%);
 
-      color:#fff;
+      color:#fff;
 
-    }
+    }
 
 
 
-    .hero-inner{
+    .hero-inner{
 
-      width:100%;
+      width:100%;
 
-      max-width:none;
+      max-width:none;
 
-      margin:0;
+      margin:0;
 
-      padding:72px clamp(24px,5vw,72px) 62px;
+      padding:72px clamp(24px,5vw,72px) 62px;
 
-      display:grid;
+      display:grid;
 
-      grid-template-columns:minmax(0,1.45fr) minmax(320px,.55fr);
+      grid-template-columns:minmax(0,1.45fr) minmax(320px,.55fr);
 
-      gap:36px;
+      gap:36px;
 
-      align-items:center;
+      align-items:center;
 
-    }
+    }
 
 
 
-    .eyebrow{
+    .eyebrow{
 
-      display:inline-flex;
+      display:inline-flex;
 
-      align-items:center;
+      align-items:center;
 
-      gap:8px;
+      gap:8px;
 
-      background:rgba(255,255,255,.16);
+      background:rgba(255,255,255,.16);
 
-      border:1px solid rgba(255,255,255,.32);
+      border:1px solid rgba(255,255,255,.32);
 
-      border-radius:999px;
+      border-radius:999px;
 
-      padding:7px 12px;
+      padding:7px 12px;
 
-      font-size:13px;
+      font-size:13px;
 
-      font-weight:700;
+      font-weight:700;
 
-    }
+    }
 
 
 
-    h1{
+    h1{
 
-      margin:18px 0 14px;
+      margin:18px 0 14px;
 
-      max-width:760px;
+      max-width:760px;
 
-      font-size:clamp(36px,6vw,68px);
+      font-size:clamp(36px,6vw,68px);
 
-      line-height:1.02;
+      line-height:1.02;
 
-      letter-spacing:-1.5px;
+      letter-spacing:-1.5px;
 
-    }
+    }
 
 
 
-    .hero p{
+    .hero p{
 
-      max-width:760px;
+      max-width:760px;
 
-      margin:0;
+      margin:0;
 
-      font-size:18px;
+      font-size:18px;
 
-      color:rgba(255,255,255,.92);
+      color:rgba(255,255,255,.92);
 
-    }
+    }
 
 
 
-    .hero-actions{
+    .hero-actions{
 
-      margin-top:26px;
+      margin-top:26px;
 
-      display:flex;
+      display:flex;
 
-      flex-wrap:wrap;
+      flex-wrap:wrap;
 
-      gap:12px;
+      gap:12px;
 
-    }
+    }
 
 
 
-    .btn{
+    .btn{
 
-      display:inline-flex;
+      display:inline-flex;
 
-      align-items:center;
+      align-items:center;
 
-      justify-content:center;
+      justify-content:center;
 
-      gap:8px;
+      gap:8px;
 
-      min-height:46px;
+      min-height:46px;
 
-      padding:11px 18px;
+      padding:11px 18px;
 
-      border-radius:12px;
+      border-radius:12px;
 
-      text-decoration:none;
+      text-decoration:none;
 
-      font-weight:800;
+      font-weight:800;
 
-      border:1px solid transparent;
+      border:1px solid transparent;
 
-      cursor:pointer;
+      cursor:pointer;
 
-    }
+    }
 
 
 
-    .btn-light{background:white;color:var(--primary-dark)}
+    .btn-light{background:white;color:var(--primary-dark)}
 
-    .btn-outline{border-color:rgba(255,255,255,.65);color:white;background:transparent}
+    .btn-outline{border-color:rgba(255,255,255,.65);color:white;background:transparent}
 
 
 
-    .hero-card{
+    .hero-card{
 
-      background:rgba(255,255,255,.13);
+      background:rgba(255,255,255,.13);
 
-      border:1px solid rgba(255,255,255,.28);
+      border:1px solid rgba(255,255,255,.28);
 
-      border-radius:var(--radius);
+      border-radius:var(--radius);
 
-      padding:24px;
+      padding:24px;
 
-      box-shadow:var(--shadow);
+      box-shadow:var(--shadow);
 
-    }
+    }
 
 
 
-    .hero-card h3{margin:0 0 16px}
+    .hero-card h3{margin:0 0 16px}
 
-    .quick-stat{
+    .quick-stat{
 
-      display:flex;
+      display:flex;
 
-      justify-content:space-between;
+      justify-content:space-between;
 
-      gap:14px;
+      gap:14px;
 
-      padding:12px 0;
+      padding:12px 0;
 
-      border-bottom:1px solid rgba(255,255,255,.18);
+      border-bottom:1px solid rgba(255,255,255,.18);
 
-    }
+    }
 
-    .quick-stat:last-child{border-bottom:0}
+    .quick-stat:last-child{border-bottom:0}
 
-    .quick-stat span{color:rgba(255,255,255,.82)}
+    .quick-stat span{color:rgba(255,255,255,.82)}
 
-    .quick-stat strong{text-align:right}
+    .quick-stat strong{text-align:right}
 
 
 
-    main{width:100%;max-width:none;margin:0;padding:34px clamp(24px,5vw,72px) 70px}
+    main{width:100%;max-width:none;margin:0;padding:34px clamp(24px,5vw,72px) 70px}
 
 
 
-    .notice{
+    .notice{
 
-      background:var(--warning);
+      background:var(--warning);
 
-      border:1px solid #F1D98A;
+      border:1px solid #F1D98A;
 
-      border-radius:14px;
+      border-radius:14px;
 
-      padding:14px 16px;
+      padding:14px 16px;
 
-      margin-bottom:28px;
+      margin-bottom:28px;
 
-      font-size:14px;
+      font-size:14px;
 
-    }
+    }
 
 
 
-    .section{
+    .section{
 
-      scroll-margin-top:92px;
+      scroll-margin-top:92px;
 
-      margin:24px 0;
+      margin:24px 0;
 
-      background:var(--surface);
+      background:var(--surface);
 
-      border:1px solid var(--line);
+      border:1px solid var(--line);
 
-      border-radius:var(--radius);
+      border-radius:var(--radius);
 
-      box-shadow:var(--shadow);
+      box-shadow:var(--shadow);
 
-      overflow:hidden;
+      overflow:hidden;
 
-    }
+    }
 
 
 
-    .section-head{
+    .section-head{
 
-      padding:26px 28px 18px;
+      padding:26px 28px 18px;
 
-      border-bottom:1px solid var(--line);
+      border-bottom:1px solid var(--line);
 
-      background:linear-gradient(180deg,#fff,var(--surface-alt));
+      background:linear-gradient(180deg,#fff,var(--surface-alt));
 
-    }
+    }
 
 
 
-    .section-head .kicker{
+    .section-head .kicker{
 
-      margin:0 0 4px;
+      margin:0 0 4px;
 
-      color:var(--primary-dark);
+      color:var(--primary-dark);
 
-      text-transform:uppercase;
+      text-transform:uppercase;
 
-      letter-spacing:.08em;
+      letter-spacing:.08em;
 
-      font-size:12px;
+      font-size:12px;
 
-      font-weight:900;
+      font-weight:900;
 
-    }
+    }
 
 
 
-    .section-head h2{margin:0;font-size:28px;line-height:1.2}
+    .section-head h2{margin:0;font-size:28px;line-height:1.2}
 
-    .section-body{padding:26px 28px}
+    .section-body{padding:26px 28px}
 
 
 
-    .cards{
+    .cards{
 
-      display:grid;
+      display:grid;
 
-      grid-template-columns:repeat(2,minmax(0,1fr));
+      grid-template-columns:repeat(2,minmax(0,1fr));
 
-      gap:16px;
+      gap:16px;
 
-    }
+    }
 
 
 
-    .card{
+    .card{
 
-      border:1px solid var(--line);
+      border:1px solid var(--line);
 
-      background:#fff;
+      background:#fff;
 
-      border-radius:15px;
+      border-radius:15px;
 
-      padding:20px;
+      padding:20px;
 
-    }
+    }
 
 
 
-    .card h3{margin:0 0 8px;font-size:18px}
+    .card h3{margin:0 0 8px;font-size:18px}
 
-    .card p{margin:0;color:var(--muted)}
+    .card p{margin:0;color:var(--muted)}
 
-    .card .tag{
+    .card .tag{
 
-      display:inline-block;
+      display:inline-block;
 
-      margin-top:12px;
+      margin-top:12px;
 
-      color:var(--primary-dark);
+      color:var(--primary-dark);
 
-      background:var(--primary-soft);
+      background:var(--primary-soft);
 
-      border-radius:999px;
+      border-radius:999px;
 
-      padding:5px 9px;
+      padding:5px 9px;
 
-      font-size:12px;
+      font-size:12px;
 
-      font-weight:800;
+      font-weight:800;
 
-    }
+    }
 
 
 
-    .requirements{
+    .requirements{
 
-      margin:0;
+      margin:0;
 
-      padding-left:20px;
+      padding-left:20px;
 
-    }
+    }
 
-    .requirements li{margin:8px 0}
+    .requirements li{margin:8px 0}
 
 
 
-    .timeline{
+    .timeline{
 
-      display:grid;
+      display:grid;
 
-      grid-template-columns:repeat(2,minmax(0,1fr));
+      grid-template-columns:repeat(2,minmax(0,1fr));
 
-      gap:16px;
+      gap:16px;
 
-    }
+    }
 
 
 
-    .intake{
+    .intake{
 
-      position:relative;
+      position:relative;
 
-      border-left:5px solid var(--primary);
+      border-left:5px solid var(--primary);
 
-      background:var(--surface-alt);
+      background:var(--surface-alt);
 
-      padding:20px;
+      padding:20px;
 
-      border-radius:12px;
+      border-radius:12px;
 
-    }
+    }
 
 
 
-    .intake .month{
+    .intake .month{
 
-      font-size:26px;
+      font-size:26px;
 
-      font-weight:900;
+      font-weight:900;
 
-      color:var(--primary-dark);
+      color:var(--primary-dark);
 
-      margin-bottom:4px;
+      margin-bottom:4px;
 
-    }
+    }
 
 
 
-    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
 
 
 
-    .semester-cell{
+    .semester-cell{
 
-      min-width:130px;
+      min-width:130px;
 
-      vertical-align:middle;
+      vertical-align:middle;
 
-      text-align:center;
+      text-align:center;
 
-      background:var(--primary-soft);
+      background:var(--primary-soft);
 
-      color:var(--primary-dark);
+      color:var(--primary-dark);
 
-      font-size:16px;
+      font-size:16px;
 
-      border-right:1px solid var(--line);
+      border-right:1px solid var(--line);
 
-    }
+    }
 
 
 
-    td.semester-total{
+    td.semester-total{
 
-      font-weight:800;
+      font-weight:800;
 
-      background:#F7FBFA;
+      background:#F7FBFA;
 
-    }
+    }
 
 
 
-    table{width:100%;border-collapse:collapse;min-width:680px;background:white}
+    table{width:100%;border-collapse:collapse;min-width:680px;background:white}
 
-    th,td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    th,td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 
-    th{background:var(--primary-soft);color:var(--primary-dark);font-size:13px}
+    th{background:var(--primary-soft);color:var(--primary-dark);font-size:13px}
 
-    tr:last-child td{border-bottom:0}
+    tr:last-child td{border-bottom:0}
 
 
 
-    .link-grid{
+    .link-grid{
 
-      display:grid;
+      display:grid;
 
-      grid-template-columns:repeat(2,minmax(0,1fr));
+      grid-template-columns:repeat(2,minmax(0,1fr));
 
-      gap:16px;
+      gap:16px;
 
-    }
+    }
 
 
 
-    .link-card{
+    .link-card{
 
-      display:block;
+      display:block;
 
-      text-decoration:none;
+      text-decoration:none;
 
-      border:1px solid var(--line);
+      border:1px solid var(--line);
 
-      border-radius:15px;
+      border-radius:15px;
 
-      padding:20px;
+      padding:20px;
 
-      background:white;
+      background:white;
 
-      transition:.2s ease;
+      transition:.2s ease;
 
-    }
+    }
 
-    .link-card:hover{
+    .link-card:hover{
 
-      transform:translateY(-2px);
+      transform:translateY(-2px);
 
-      border-color:var(--primary);
+      border-color:var(--primary);
 
-      box-shadow:0 10px 24px rgba(23,49,45,.08);
+      box-shadow:0 10px 24px rgba(23,49,45,.08);
 
-    }
+    }
 
-    .link-card strong{display:block;color:var(--ink);font-size:18px;margin-bottom:4px}
+    .link-card strong{display:block;color:var(--ink);font-size:18px;margin-bottom:4px}
 
-    .link-card span{color:var(--muted);font-size:14px}
+    .link-card span{color:var(--muted);font-size:14px}
 
 
 
-    .footer{
+    .footer{
 
-      border-top:1px solid var(--line);
+      border-top:1px solid var(--line);
 
-      background:#fff;
+      background:#fff;
 
-      color:var(--muted);
+      color:var(--muted);
 
-    }
+    }
 
 
 
-    .footer-inner{
+    .footer-inner{
 
-      width:100%;
+      width:100%;
 
-      max-width:none;
+      max-width:none;
 
-      margin:0;
+      margin:0;
 
-      padding:26px clamp(24px,5vw,72px);
+      padding:26px clamp(24px,5vw,72px);
 
-      display:flex;
+      display:flex;
 
-      justify-content:space-between;
+      justify-content:space-between;
 
-      gap:20px;
+      gap:20px;
 
-      flex-wrap:wrap;
+      flex-wrap:wrap;
 
-      font-size:13px;
+      font-size:13px;
 
-    }
+    }
 
 
 
-    .admin-note{
+    .admin-note{
 
-      margin-top:18px;
+      margin-top:18px;
 
-      border:1px dashed var(--primary);
+      border:1px dashed var(--primary);
 
-      background:var(--primary-soft);
+      background:var(--primary-soft);
 
-      padding:14px 16px;
+      padding:14px 16px;
 
-      border-radius:12px;
+      border-radius:12px;
 
-      font-size:13px;
+      font-size:13px;
 
-    }
+    }
 
 
 
 
 
-    .section{
+    .section{
 
-      width:100%;
+      width:100%;
 
-    }
+    }
 
 
 
-    .section-body,
+    .section-body,
 
-    .section-head{
+    .section-head{
 
-      width:100%;
+      width:100%;
 
-    }
+    }
 
 
 
-    @media(min-width:1200px){
+    @media(min-width:1200px){
 
-      .hero-inner{
+      .hero-inner{
 
-        padding-left:6vw;
+        padding-left:6vw;
 
-        padding-right:6vw;
+        padding-right:6vw;
 
-      }
+      }
 
-      main{
+      main{
 
-        padding-left:6vw;
+        padding-left:6vw;
 
-        padding-right:6vw;
+        padding-right:6vw;
 
-      }
+      }
 
-      .footer-inner{
+      .footer-inner{
 
-        padding-left:6vw;
+        padding-left:6vw;
 
-        padding-right:6vw;
+        padding-right:6vw;
 
-      }
+      }
 
-    }
+    }
 
 
 
-    @media(max-width:900px){
+    @media(max-width:900px){
 
-      .hero-inner{grid-template-columns:1fr;padding-left:20px;padding-right:20px}
+      .hero-inner{grid-template-columns:1fr;padding-left:20px;padding-right:20px}
 
-      .hero-card{max-width:600px}
+      .hero-card{max-width:600px}
 
-      .nav{align-items:flex-start}
+      .nav{align-items:flex-start}
 
-      .navlinks{display:none}
+      .navlinks{display:none}
 
-    }
+    }
 
 
 
-    @media(max-width:680px){
+    @media(max-width:680px){
 
-      .hero-inner{padding-top:48px}
+      .hero-inner{padding-top:48px}
 
-      .cards,.timeline,.link-grid{grid-template-columns:1fr}
+      .cards,.timeline,.link-grid{grid-template-columns:1fr}
 
-      .section-head,.section-body{padding-left:20px;padding-right:20px}
+      .section-head,.section-body{padding-left:20px;padding-right:20px}
 
-      h1{font-size:42px}
+      h1{font-size:42px}
 
-    }
+    }
 
-  </style>
+  </style>
 
 </head>
 
@@ -793,665 +792,665 @@
 
 <body>
 
-  <header class="topbar">
+  <header class="topbar">
 
-    <nav class="nav" aria-label="Main navigation">
+    <nav class="nav" aria-label="Main navigation">
 
-      <a class="brand" href="#home">
+      <a class="brand" href="#home">
 
-        <div class="brand-mark">DS</div>
+        <div class="brand-mark">DS</div>
 
-        <div class="brand-text">
+        <div class="brand-text">
 
-          <strong>MSc in Data Science</strong>
+          <strong>MSc in Data Science</strong>
 
-          <span>FKC · Universiti Malaysia Perlis</span>
+          <span>FKC · Universiti Malaysia Perlis</span>
 
-        </div>
+        </div>
 
-      </a>
+      </a>
 
 
 
-      <div class="navlinks">
+      <div class="navlinks">
 
-        <a href="#overview">Overview</a>
+        <a href="#overview">Overview</a>
 
-        <a href="#entry">Entry</a>
+        <a href="#entry">Entry</a>
 
-        <a href="#intake">Intake</a>
+        <a href="#intake">Intake</a>
 
-        <a href="#structure">Structure</a>
+        <a href="#structure">Structure</a>
 
-        <a href="#fees">Fees</a>
+        <a href="#fees">Fees</a>
 
-        <a href="#calendar">Calendar</a>
+        <a href="#calendar">Calendar</a>
 
-        <a href="#timetable">Timetable</a>
+        <a href="#timetable">Timetable</a>
 
-        <a href="#contact">Contact</a>
+        <a href="#contact">Contact</a>
 
-      </div>
+      </div>
 
-    </nav>
+    </nav>
 
-  </header>
+  </header>
 
 
 
-  <section class="hero" id="home">
+  <section class="hero" id="home">
 
-    <div class="hero-inner">
+    <div class="hero-inner">
 
-      <div>
+      <div>
 
-        <span class="eyebrow">Faculty of Intelligent Computing (FKC) · UniMAP</span>
+        <span class="eyebrow">Faculty of Intelligent Computing (FKC) · UniMAP</span>
 
-        <h1>Master of Science in Data Science</h1>
+        <h1>Master of Science in Data Science</h1>
 
-        <p>A single information hub for prospective and current postgraduate students: entry requirements, intake dates, programme structure, fees, academic calendars and semester timetables.</p>
+        <p>A single information hub for prospective and current postgraduate students: entry requirements, intake dates, programme structure, fees, academic calendars and semester timetables.</p>
 
-        <div class="hero-actions">
+        <div class="hero-actions">
 
-          <a class="btn btn-light" href="#entry">View programme information</a>
+          <a class="btn btn-light" href="#entry">View programme information</a>
 
-          <a class="btn btn-outline" id="applyBtn" href="https://opa.unimap.edu.my/OPAVer2/" target="_blank" rel="noopener">Application portal</a>
+          <a class="btn btn-outline" id="applyBtn" href="https://opa.unimap.edu.my/OPAVer2/" target="_blank" rel="noopener">Application portal</a>
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
 
 
-      <aside class="hero-card" aria-label="Programme quick facts">
+      <aside class="hero-card" aria-label="Programme quick facts">
 
-        <h3>Quick facts</h3>
+        <h3>Quick facts</h3>
 
-        <div class="quick-stat"><span>Programme</span><strong>Master of Science<br>in Data Science</strong></div>
+        <div class="quick-stat"><span>Programme</span><strong>Master of Science<br>in Data Science</strong></div>
 
-        <div class="quick-stat"><span>Faculty</span><strong>Faculty Intelligent Computing</strong></div>
+        <div class="quick-stat"><span>Faculty</span><strong>Faculty Intelligent Computing</strong></div>
 
-        <div class="quick-stat"><span>Intakes</span><strong>March & October</strong></div>
+        <div class="quick-stat"><span>Intakes</span><strong>March & October</strong></div>
 
-        <div class="quick-stat"><span>Full-time</span><strong>Minimum 1 year</strong></div>
+        <div class="quick-stat"><span>Full-time</span><strong>Minimum 1 year</strong></div>
 
-        <div class="quick-stat"><span>Programme credits</span><strong>40 credits</strong></div>
+        <div class="quick-stat"><span>Programme credits</span><strong>40 credits</strong></div>
 
-      </aside>
+      </aside>
 
-    </div>
+    </div>
 
-  </section>
+  </section>
 
 
 
-  <main>
+  <main>
 
 
 
-    <section class="section" id="overview">
+    <section class="section" id="overview">
 
-      <div class="section-head">
+      <div class="section-head">
 
-        <p class="kicker">Programme Overview</p>
+        <p class="kicker">Programme Overview</p>
 
-        <h2>Why Choose MSc in Data Science?</h2>
+        <h2>Why Choose MSc in Data Science?</h2>
 
-      </div>
+      </div>
 
-      <div class="section-body">
+      <div class="section-body">
 
-        <div class="cards">
+        <div class="cards">
 
-          <article class="card"><h3>Professional Certifications</h3><p>Opportunity to obtain professional certifications during your postgraduate study.</p></article>
+          <article class="card"><h3>Professional Certifications</h3><p>Opportunity to obtain professional certifications during your postgraduate study.</p></article>
 
-          <article class="card"><h3>Coursework Mode</h3><p>Master by Coursework with a minimum full-time duration of 1 year.</p></article>
+          <article class="card"><h3>Coursework Mode</h3><p>Master by Coursework with a minimum full-time duration of 1 year.</p></article>
 
-          <article class="card"><h3>Working-Professional Friendly</h3><p>Weekend/evening classes are highlighted for working professionals.</p></article>
+          <article class="card"><h3>Working-Professional Friendly</h3><p>Weekend/evening classes are highlighted for working professionals.</p></article>
 
-          <article class="card"><h3>Flexible Study Duration</h3><p><strong>Full-time:</strong> 1–3 years<br><strong>Part-time:</strong> 2–5 years</p></article>
+          <article class="card"><h3>Flexible Study Duration</h3><p><strong>Full-time:</strong> 1–3 years<br><strong>Part-time:</strong> 2–5 years</p></article>
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
-    </section>
+    </section>
 
 <section class="section" id="entry">
 
-      <div class="section-head">
+      <div class="section-head">
 
-        <p class="kicker">Admissions</p>
+        <p class="kicker">Admissions</p>
 
-        <h2>Entry Requirements</h2>
+        <h2>Entry Requirements</h2>
 
-      </div>
+      </div>
 
-      <div class="section-body">
+      <div class="section-body">
 
-        <ul class="requirements" id="requirementsList"></ul>
+        <ul class="requirements" id="requirementsList"></ul>
 
 
 
-        <div class="card" style="margin-top:18px">
+        <div class="card" style="margin-top:18px">
 
-          <h3>English Requirements — International Students</h3>
+          <h3>English Requirements — International Students</h3>
 
-          <ul class="requirements">
+          <ul class="requirements">
 
-            <li>IELTS ≥ 5.5 / MUET Band ≥ 4.0</li>
+            <li>IELTS ≥ 5.5 / MUET Band ≥ 4.0</li>
 
-            <li>TOEFL iBT ≥ 46 / TOEFL Essentials ≥ 8</li>
+            <li>TOEFL iBT ≥ 46 / TOEFL Essentials ≥ 8</li>
 
-            <li>PTE ≥ 51 / Cambridge ≥ 160</li>
+            <li>PTE ≥ 51 / Cambridge ≥ 160</li>
 
-          </ul>
+          </ul>
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
-    </section>
+    </section>
 
 
 
-    <section class="section" id="intake">
+    <section class="section" id="intake">
 
-      <div class="section-head">
+      <div class="section-head">
 
-        <p class="kicker">Admissions Cycle</p>
+        <p class="kicker">Admissions Cycle</p>
 
-        <h2>Intake Information</h2>
+        <h2>Intake Information</h2>
 
-      </div>
+      </div>
 
-      <div class="section-body">
+      <div class="section-body">
 
-        <div class="timeline">
+        <div class="timeline">
 
-          <article class="intake">
+          <article class="intake">
 
-            <div class="month">March</div>
+            <div class="month">March</div>
 
-            <div id="marchText">Main intake information.</div>
+            <div id="marchText">Main intake information.</div>
 
-          </article>
+          </article>
 
-          <article class="intake">
+          <article class="intake">
 
-            <div class="month">October</div>
+            <div class="month">October</div>
 
-            <div id="octoberText">Main intake information.</div>
+            <div id="octoberText">Main intake information.</div>
 
-          </article>
+          </article>
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
-    </section>
+    </section>
 
 
 
-    <section class="section" id="structure">
+    <section class="section" id="structure">
 
-      <div class="section-head">
+      <div class="section-head">
 
-        <p class="kicker">Study Plan</p>
+        <p class="kicker">Study Plan</p>
 
-        <h2>Programme Structure</h2>
+        <h2>Programme Structure</h2>
 
-      </div>
+      </div>
 
-      <div class="section-body">
+      <div class="section-body">
 
-        <div class="table-wrap">
+        <div class="table-wrap">
 
-          <table>
+          <table>
 
-            <thead>
+            <thead>
 
-              <tr>
+              <tr>
 
-                <th>Semester</th>
+                <th>Semester</th>
 
-                <th>Course / Component</th>
+                <th>Course / Component</th>
 
-                <th>Type</th>
+                <th>Type</th>
 
-                <th>Credit</th>
+                <th>Credit</th>
 
-              </tr>
+              </tr>
 
-            </thead>
+            </thead>
 
-            <tbody id="structureBody"></tbody>
+            <tbody id="structureBody"></tbody>
 
-          </table>
+          </table>
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
-    </section>
+    </section>
 
 
 
-    <section class="section" id="fees">
+    <section class="section" id="fees">
 
-      <div class="section-head">
+      <div class="section-head">
 
-        <p class="kicker">Financial Information</p>
+        <p class="kicker">Financial Information</p>
 
-        <h2>Fee Structure</h2>
+        <h2>Fee Structure</h2>
 
-      </div>
+      </div>
 
-      <div class="section-body">
+      <div class="section-body">
 
 
 
-        <div class="card" style="margin-bottom:18px">
+        <div class="card" style="margin-bottom:18px">
 
-          <h3>Local Full-Time Student</h3>
+          <h3>Local Full-Time Student</h3>
 
-          <p style="margin-bottom:14px">30 units over 2 semesters. Tuition rate shown in the supplied fee structure: RM 460 per unit.</p>
+          <p style="margin-bottom:14px">30 units over 2 semesters. Tuition rate shown in the supplied fee structure: RM 460 per unit.</p>
 
-          <div class="table-wrap">
+          <div class="table-wrap">
 
-            <table>
+            <table>
 
-              <thead><tr><th>Semester</th><th>Fee Item</th><th>Amount</th></tr></thead>
+              <thead><tr><th>Semester</th><th>Fee Item</th><th>Amount</th></tr></thead>
 
-              <tbody>
+              <tbody>
 
-                <tr><td rowspan="5"><strong>Semester 1</strong></td><td>Tuition Fees (21 units)</td><td>RM 9,660.00</td></tr>
+                <tr><td rowspan="5"><strong>Semester 1</strong></td><td>Tuition Fees (21 units)</td><td>RM 9,660.00</td></tr>
 
-                <tr><td>Personal Bond</td><td>–</td></tr>
+                <tr><td>Personal Bond</td><td>–</td></tr>
 
-                <tr><td>Service Fees</td><td>RM 627.50</td></tr>
+                <tr><td>Service Fees</td><td>RM 627.50</td></tr>
 
-                <tr><td>Registration Fees (non-recurrence)</td><td>RM 650.00</td></tr>
+                <tr><td>Registration Fees (non-recurrence)</td><td>RM 650.00</td></tr>
 
-                <tr><td><strong>Total Semester 1</strong></td><td><strong>RM 10,937.50</strong></td></tr>
+                <tr><td><strong>Total Semester 1</strong></td><td><strong>RM 10,937.50</strong></td></tr>
 
-                <tr><td rowspan="5"><strong>Semester 2</strong></td><td>Tuition Fees (9 units)</td><td>RM 4,140.00</td></tr>
+                <tr><td rowspan="5"><strong>Semester 2</strong></td><td>Tuition Fees (9 units)</td><td>RM 4,140.00</td></tr>
 
-                <tr><td>Service Fees</td><td>RM 627.50</td></tr>
+                <tr><td>Service Fees</td><td>RM 627.50</td></tr>
 
-                <tr><td>Project Evaluation</td><td>RM 1,000.00</td></tr>
+                <tr><td>Project Evaluation</td><td>RM 1,000.00</td></tr>
 
-                <tr><td>Supervisory Fee</td><td>RM 1,500.00</td></tr>
+                <tr><td>Supervisory Fee</td><td>RM 1,500.00</td></tr>
 
-                <tr><td><strong>Total Semester 2</strong></td><td><strong>RM 7,267.50</strong></td></tr>
+                <tr><td><strong>Total Semester 2</strong></td><td><strong>RM 7,267.50</strong></td></tr>
 
-                <tr><td colspan="2"><strong>Grand Total (2 semesters)</strong></td><td><strong>RM 18,205.00</strong></td></tr>
+                <tr><td colspan="2"><strong>Grand Total (2 semesters)</strong></td><td><strong>RM 18,205.00</strong></td></tr>
 
-              </tbody>
+              </tbody>
 
-            </table>
+            </table>
 
-          </div>
+          </div>
 
-        </div>
+        </div>
 
 
 
-        <div class="card" style="margin-bottom:18px">
+        <div class="card" style="margin-bottom:18px">
 
-          <h3>International Full-Time Student</h3>
+          <h3>International Full-Time Student</h3>
 
-          <p style="margin-bottom:14px">30 units over 2 semesters. Tuition rate shown in the supplied fee graphic: RM 690 per unit.</p>
+          <p style="margin-bottom:14px">30 units over 2 semesters. Tuition rate shown in the supplied fee graphic: RM 690 per unit.</p>
 
-          <div class="table-wrap">
+          <div class="table-wrap">
 
-            <table>
+            <table>
 
-              <thead><tr><th>Semester</th><th>Fee Item</th><th>Amount</th></tr></thead>
+              <thead><tr><th>Semester</th><th>Fee Item</th><th>Amount</th></tr></thead>
 
-              <tbody>
+              <tbody>
 
-                <tr><td rowspan="5"><strong>Semester 1</strong></td><td>Tuition Fees (21 units)</td><td>RM 14,490.00</td></tr>
+                <tr><td rowspan="5"><strong>Semester 1</strong></td><td>Tuition Fees (21 units)</td><td>RM 14,490.00</td></tr>
 
-                <tr><td>Personal Bond</td><td>RM 2,000.00</td></tr>
+                <tr><td>Personal Bond</td><td>RM 2,000.00</td></tr>
 
-                <tr><td>Service Fees</td><td>RM 620.00</td></tr>
+                <tr><td>Service Fees</td><td>RM 620.00</td></tr>
 
-                <tr><td>Registration Fees (non-recurrence)</td><td>RM 2,780.00</td></tr>
+                <tr><td>Registration Fees (non-recurrence)</td><td>RM 2,780.00</td></tr>
 
-                <tr><td><strong>Total Semester 1</strong></td><td><strong>RM 19,890.00</strong></td></tr>
+                <tr><td><strong>Total Semester 1</strong></td><td><strong>RM 19,890.00</strong></td></tr>
 
-                <tr><td rowspan="5"><strong>Semester 2</strong></td><td>Tuition Fees (9 units)</td><td>RM 6,210.00</td></tr>
+                <tr><td rowspan="5"><strong>Semester 2</strong></td><td>Tuition Fees (9 units)</td><td>RM 6,210.00</td></tr>
 
-                <tr><td>Service Fees</td><td>RM 620.00</td></tr>
+                <tr><td>Service Fees</td><td>RM 620.00</td></tr>
 
-                <tr><td>Project Evaluation</td><td>RM 1,000.00</td></tr>
+                <tr><td>Project Evaluation</td><td>RM 1,000.00</td></tr>
 
-                <tr><td>Supervisory Fee</td><td>RM 1,500.00</td></tr>
+                <tr><td>Supervisory Fee</td><td>RM 1,500.00</td></tr>
 
-                <tr><td><strong>Total Semester 2</strong></td><td><strong>RM 9,330.00</strong></td></tr>
+                <tr><td><strong>Total Semester 2</strong></td><td><strong>RM 9,330.00</strong></td></tr>
 
-                <tr><td colspan="2"><strong>Grand Total (2 semesters)</strong></td><td><strong>RM 29,220.00</strong></td></tr>
+                <tr><td colspan="2"><strong>Grand Total (2 semesters)</strong></td><td><strong>RM 29,220.00</strong></td></tr>
 
-              </tbody>
+              </tbody>
 
-            </table>
+            </table>
 
-          </div>
+          </div>
 
-        </div>
+        </div>
 
 
 
-        <div class="card">
+        <div class="card">
 
-          <h3>Part-Time Student</h3>
+          <h3>Part-Time Student</h3>
 
-          <p style="margin-bottom:14px">30 units across 4 semesters. Tuition rate shown in the supplied fee graphic: RM 460 per unit.</p>
+          <p style="margin-bottom:14px">30 units across 4 semesters. Tuition rate shown in the supplied fee graphic: RM 460 per unit.</p>
 
-          <div class="table-wrap">
+          <div class="table-wrap">
 
-            <table>
+            <table>
 
-              <thead><tr><th>Semester</th><th>Fee Item</th><th>Amount</th></tr></thead>
+              <thead><tr><th>Semester</th><th>Fee Item</th><th>Amount</th></tr></thead>
 
-              <tbody>
+              <tbody>
 
-                <tr><td rowspan="5"><strong>Semester 1</strong></td><td>Tuition Fees (12 units)</td><td>RM 5,520.00</td></tr>
+                <tr><td rowspan="5"><strong>Semester 1</strong></td><td>Tuition Fees (12 units)</td><td>RM 5,520.00</td></tr>
 
-                <tr><td>Personal Bond</td><td>–</td></tr>
+                <tr><td>Personal Bond</td><td>–</td></tr>
 
-                <tr><td>Service Fees</td><td>RM 582.50</td></tr>
+                <tr><td>Service Fees</td><td>RM 582.50</td></tr>
 
-                <tr><td>Registration Fees (non-recurrence)</td><td>RM 650.00</td></tr>
+                <tr><td>Registration Fees (non-recurrence)</td><td>RM 650.00</td></tr>
 
-                <tr><td><strong>Total Semester 1</strong></td><td><strong>RM 6,752.50</strong></td></tr>
+                <tr><td><strong>Total Semester 1</strong></td><td><strong>RM 6,752.50</strong></td></tr>
 
 
 
-                <tr><td rowspan="3"><strong>Semester 2</strong></td><td>Tuition Fees (9 units)</td><td>RM 4,140.00</td></tr>
+                <tr><td rowspan="3"><strong>Semester 2</strong></td><td>Tuition Fees (9 units)</td><td>RM 4,140.00</td></tr>
 
-                <tr><td>Service Fees</td><td>RM 582.50</td></tr>
+                <tr><td>Service Fees</td><td>RM 582.50</td></tr>
 
-                <tr><td><strong>Total Semester 2</strong></td><td><strong>RM 4,722.50</strong></td></tr>
+                <tr><td><strong>Total Semester 2</strong></td><td><strong>RM 4,722.50</strong></td></tr>
 
 
 
-                <tr><td rowspan="3"><strong>Semester 3</strong></td><td>Tuition Fees (9 units)</td><td>RM 4,140.00</td></tr>
+                <tr><td rowspan="3"><strong>Semester 3</strong></td><td>Tuition Fees (9 units)</td><td>RM 4,140.00</td></tr>
 
-                <tr><td>Service Fees</td><td>RM 582.50</td></tr>
+                <tr><td>Service Fees</td><td>RM 582.50</td></tr>
 
-                <tr><td><strong>Total Semester 3</strong></td><td><strong>RM 4,722.50</strong></td></tr>
+                <tr><td><strong>Total Semester 3</strong></td><td><strong>RM 4,722.50</strong></td></tr>
 
 
 
-                <tr><td rowspan="4"><strong>Semester 4</strong></td><td>Service Fees</td><td>RM 582.50</td></tr>
+                <tr><td rowspan="4"><strong>Semester 4</strong></td><td>Service Fees</td><td>RM 582.50</td></tr>
 
-                <tr><td>Project Evaluation</td><td>RM 1,000.00</td></tr>
+                <tr><td>Project Evaluation</td><td>RM 1,000.00</td></tr>
 
-                <tr><td>Supervisory Fee</td><td>RM 1,500.00</td></tr>
+                <tr><td>Supervisory Fee</td><td>RM 1,500.00</td></tr>
 
-                <tr><td><strong>Total Semester 4</strong></td><td><strong>RM 3,082.50</strong></td></tr>
+                <tr><td><strong>Total Semester 4</strong></td><td><strong>RM 3,082.50</strong></td></tr>
 
 
 
-                <tr><td colspan="2"><strong>Grand Total (4 semesters)</strong></td><td><strong>RM 19,280.00</strong></td></tr>
+                <tr><td colspan="2"><strong>Grand Total (4 semesters)</strong></td><td><strong>RM 19,280.00</strong></td></tr>
 
-              </tbody>
+              </tbody>
 
-            </table>
+            </table>
 
-          </div>
+          </div>
 
-        </div>
+        </div>
 
 
 
-        <div class="admin-note">
+        <div class="admin-note">
 
-          Tuition fees are calculated based on the number of units registered each semester.
+          Tuition fees are calculated based on the number of units registered each semester.
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
-    </section>
+    </section>
 
 
 
-    <section class="section" id="calendar">
+    <section class="section" id="calendar">
 
-      <div class="section-head">
+      <div class="section-head">
 
-        <p class="kicker">Academic Planning</p>
+        <p class="kicker">Academic Planning</p>
 
-        <h2>Academic Calendar</h2>
+        <h2>Academic Calendar</h2>
 
-      </div>
+      </div>
 
-      <div class="section-body">
+      <div class="section-body">
 
-        <div class="link-grid">
+        <div class="link-grid">
 
-          <a class="link-card" id="calendar1" href="#" target="_blank" rel="noopener">
+          <a class="link-card" id="calendar1" href="#" target="_blank" rel="noopener">
 
-            <strong>Academic Session 2026/2027</strong>
+            <strong>Academic Session 2026/2027</strong>
 
-            <span>Open official calendar</span>
+            <span>Open official calendar</span>
 
-          </a>
+          </a>
 
-          <a class="link-card" id="calendar2" href="#" target="_blank" rel="noopener">
+          <a class="link-card" id="calendar2" href="#" target="_blank" rel="noopener">
 
-            <strong>Academic Session 2025/2026</strong>
+            <strong>Academic Session 2025/2026</strong>
 
-            <span>Open official calendar</span>
+            <span>Open official calendar</span>
 
-          </a>
+          </a>
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
-    </section>
+    </section>
 
 
 
-    <section class="section" id="timetable">
+    <section class="section" id="timetable">
 
-      <div class="section-head">
+      <div class="section-head">
 
-        <p class="kicker">Class Schedule</p>
+        <p class="kicker">Class Schedule</p>
 
-        <h2>Timetable</h2>
+        <h2>Timetable</h2>
 
-      </div>
+      </div>
 
-      <div class="section-body">
+      <div class="section-body">
 
-        <div class="restricted-note">
+        <div class="restricted-note">
 
-          <strong>🔒 Restricted access</strong>
+          <strong>🔒 Restricted access</strong>
 
-          Timetable information is intended only for authorised MSc in Data Science students and relevant UniMAP staff.
+          Timetable information is intended only for authorised MSc in Data Science students and relevant UniMAP staff.
 
-          Please sign in with an authorised UniMAP account. Access is controlled by the Google Drive/Google Sheets sharing settings.
+          Please sign in with an authorised UniMAP account. Access is controlled by the Google Drive/Google Sheets sharing settings.
 
-        </div>
+        </div>
 
 
 
-        <div class="link-grid">
+        <div class="link-grid">
 
-          <a class="link-card restricted-link" id="timetable1" href="#" target="_blank" rel="noopener">
+          <a class="link-card restricted-link" id="timetable1" href="#" target="_blank" rel="noopener">
 
-            <strong>🔒 Semester 1 Timetable</strong>
+            <strong>🔒 Semester 1 Timetable</strong>
 
-            <span>View the current class timetable</span>
+            <span>View the current class timetable</span>
 
-            <span class="access-label">Authorised UniMAP users only</span>
+            <span class="access-label">Authorised UniMAP users only</span>
 
-          </a>
+          </a>
 
 
 
-          <a class="link-card restricted-link" id="timetable2" href="#" target="_blank" rel="noopener">
+          <a class="link-card restricted-link" id="timetable2" href="#" target="_blank" rel="noopener">
 
-            <strong>🔒 Semester 2 Timetable</strong>
+            <strong>🔒 Semester 2 Timetable</strong>
 
-            <span>View the current class timetable</span>
+            <span>View the current class timetable</span>
 
-            <span class="access-label">Authorised UniMAP users only</span>
+            <span class="access-label">Authorised UniMAP users only</span>
 
-          </a>
+          </a>
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
-    </section>
+    </section>
 
-      <section class="section" id="contact">
+      <section class="section" id="contact">
 
-      <div class="section-head">
+      <div class="section-head">
 
-        <p class="kicker">Contact</p>
+        <p class="kicker">Contact</p>
 
-        <h2>Programme & Postgraduate Enquiries</h2>
+        <h2>Programme & Postgraduate Enquiries</h2>
 
-      </div>
+      </div>
 
-      <div class="section-body">
+      <div class="section-body">
 
-        <div class="cards">
+        <div class="cards">
 
-          <article class="card">
+          <article class="card">
 
-            <h3>Faculty</h3>
+            <h3>Faculty</h3>
 
-            <p>Faculty of Intelligent Computing, Universiti Malaysia Perlis (UniMAP)<br>Pauh Putra Campus, 02600 Arau, Perlis, Malaysia</p>
+            <p>Faculty of Intelligent Computing, Universiti Malaysia Perlis (UniMAP)<br>Pauh Putra Campus, 02600 Arau, Perlis, Malaysia</p>
 
-          </article>
+          </article>
 
-          <article class="card">
+          <article class="card">
 
-            <h3>Contact</h3>
+            <h3>Contact</h3>
 
-            <p>Tel: +604 9414147<br>Mobile: +6012 3010783 (Dr. Nur Hafizah Ghazali)<br><a href="https://cgs.unimap.edu.my" target="_blank" rel="noopener">Centre for Graduate Studies</a></p>
+            <p>Tel: +604 9414147<br>Mobile: +6012 3010783 (Dr. Nur Hafizah Ghazali)<br><a href="https://cgs.unimap.edu.my" target="_blank" rel="noopener">Centre for Graduate Studies</a></p>
 
-          </article>
+          </article>
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
-    </section>
+    </section>
 
-  </main>
+  </main>
 
 
 
-  <footer class="footer">
+  <footer class="footer">
 
-    <div class="footer-inner">
+    <div class="footer-inner">
 
-      <div><strong>MSc in Data Science · FKC, UniMAP</strong><br>Programme Information Portal</div>
+      <div><strong>MSc in Data Science · FKC, UniMAP</strong><br>Programme Information Portal</div>
 
-      <div>Last updated: <span id="lastUpdated"></span></div>
+      <div>Last updated: <span id="lastUpdated"></span></div>
 
-    </div>
+    </div>
 
-  </footer>
+  </footer>
 
 
 
-  <script>
+  <script>
 
-    /*
+    /*
 
-      =============================================================
+      =============================================================
 
-      EDIT THIS CONFIG ONLY
+      EDIT THIS CONFIG ONLY
 
-      =============================================================
+      =============================================================
 
-      Replace placeholder text/URLs with the official FKC / UniMAP
+      Replace placeholder text/URLs with the official FKC / UniMAP
 
-      information for the relevant academic session.
+      information for the relevant academic session.
 
-    */
+    */
 
-    const CONFIG = {
+    const CONFIG = {
 
-      applicationUrl: "https://opa.unimap.edu.my/OPAVer2/",
+      applicationUrl: "https://opa.unimap.edu.my/OPAVer2/",
 
 
 
-      entryRequirements: [
+      entryRequirements: [
 
-        "Computing/related degree with CGPA ≥ 2.50; OR",
+        "Computing/related degree with CGPA ≥ 2.50; OR",
 
-        "CGPA ≥ 2.00 in Computing/related fields with internal assessment; OR",
+        "CGPA ≥ 2.00 in Computing/related fields with internal assessment; OR",
 
-        "Non-computing degree with CGPA ≥ 2.00 and relevant work experience; prerequisite courses may be required; OR",
+        "Non-computing degree with CGPA ≥ 2.00 and relevant work experience; prerequisite courses may be required; OR",
 
-        "Non-computing degree with CGPA ≥ 2.00 without work experience; prerequisite courses must be completed; OR",
+        "Non-computing degree with CGPA ≥ 2.00 without work experience; prerequisite courses must be completed; OR",
 
-        "Equivalent qualifications recognized by the Government of Malaysia, subject to the conditions stated for the programme."
+        "Equivalent qualifications recognized by the Government of Malaysia, subject to the conditions stated for the programme."
 
-      ],
+      ],
 
 
 
-      intake: {
+      intake: {
 
-        march: "March intake — one of two intakes offered each year.",
+        march: "March intake — one of two intakes offered each year.",
 
-        october: "October intake — one of two intakes offered each year."
+        october: "October intake — one of two intakes offered each year."
 
-      },
+      },
 
 
 
-      programmeStructure: [
+      programmeStructure: [
 
-        ["Semester 1", "Data Science", "Core", ""],
+        ["Semester 1", "Data Science", "Core", ""],
 
-        ["Semester 1", "Probability and Statistics", "Core", ""],
+        ["Semester 1", "Probability and Statistics", "Core", ""],
 
-        ["Semester 1", "Artificial Intelligence for Data Science", "Core", ""],
+        ["Semester 1", "Artificial Intelligence for Data Science", "Core", ""],
 
-        ["Semester 1", "Applied Machine Learning in Electronics", "Core", ""],
+        ["Semester 1", "Applied Machine Learning in Electronics", "Core", ""],
 
-        ["Semester 1", "Data Visualization and Exploration", "Core", ""],
+        ["Semester 1", "Data Visualization and Exploration", "Core", ""],
 
-        ["Semester 1", "Research Methodology", "Core", ""],
+        ["Semester 1", "Research Methodology", "Core", ""],
 
-        ["Semester 1", "Big Data", "Core", ""],
+        ["Semester 1", "Big Data", "Core", ""],
 
-        ["Semester 1", "Semester total", "7 courses", "21 credits"],
+        ["Semester 1", "Semester total", "7 courses", "21 credits"],
 
 
 
-        ["Semester 2", "Data Science Project", "Core", ""],
+        ["Semester 2", "Data Science Project", "Core", ""],
 
-        ["Semester 2", "Electives — choose 3", "Elective", ""],
+        ["Semester 2", "Electives — choose 3", "Elective", ""],
 
-        ["Semester 2", "Advanced Cloud Computing", "Elective option", ""],
+        ["Semester 2", "Advanced Cloud Computing", "Elective option", ""],
 
-        ["Semester 2", "Data Analytics for Electronics", "Elective option", ""],
+        ["Semester 2", "Data Analytics for Electronics", "Elective option", ""],
 
-        ["Semester 2", "Data Analytics and Data Management", "Elective option", ""],
+        ["Semester 2", "Data Analytics and Data Management", "Elective option", ""],
 
-        ["Semester 2", "Data Analytics for Biomedical", "Elective option", ""],
+        ["Semester 2", "Data Analytics for Biomedical", "Elective option", ""],
 
-        ["Semester 2", "Deep Learning", "Elective option", ""],
+        ["Semester 2", "Deep Learning", "Elective option", ""],
 
-        ["Semester 2", "Text Analytics", "Elective option", ""],
+        ["Semester 2", "Text Analytics", "Elective option", ""],
 
-        ["Semester 2", "Semester total", "Project + 3 electives", "19 credits"]
+        ["Semester 2", "Semester total", "Project + 3 electives", "19 credits"]
 
-      ],
+      ],
 
 
 
@@ -1463,201 +1462,201 @@
 
 
 
-      lastUpdated: "2 October 2026"
+      lastUpdated: "2 October 2026"
 
-    };
+    };
 
 
 
-    // Render entry requirements
+    // Render entry requirements
 
-    const req = document.getElementById("requirementsList");
+    const req = document.getElementById("requirementsList");
 
-    CONFIG.entryRequirements.forEach(item => {
+    CONFIG.entryRequirements.forEach(item => {
 
-      const li = document.createElement("li");
+      const li = document.createElement("li");
 
-      li.textContent = item;
+      li.textContent = item;
 
-      req.appendChild(li);
+      req.appendChild(li);
 
-    });
+    });
 
 
 
-    // Intake
+    // Intake
 
-    document.getElementById("marchText").textContent = CONFIG.intake.march;
+    document.getElementById("marchText").textContent = CONFIG.intake.march;
 
-    document.getElementById("octoberText").textContent = CONFIG.intake.october;
+    document.getElementById("octoberText").textContent = CONFIG.intake.october;
 
 
 
-    // Programme structure — group rows by semester so the semester label appears once
+    // Programme structure — group rows by semester so the semester label appears once
 
-    const structureBody = document.getElementById("structureBody");
+    const structureBody = document.getElementById("structureBody");
 
-    const groupedStructure = CONFIG.programmeStructure.reduce((groups, row) => {
+    const groupedStructure = CONFIG.programmeStructure.reduce((groups, row) => {
 
-      const semester = row[0];
+      const semester = row[0];
 
-      if (!groups[semester]) groups[semester] = [];
+      if (!groups[semester]) groups[semester] = [];
 
-      groups[semester].push(row.slice(1));
+      groups[semester].push(row.slice(1));
 
-      return groups;
+      return groups;
 
-    }, {});
+    }, {});
 
 
 
-    Object.entries(groupedStructure).forEach(([semester, rows]) => {
+    Object.entries(groupedStructure).forEach(([semester, rows]) => {
 
-      rows.forEach((row, index) => {
+      rows.forEach((row, index) => {
 
-        const tr = document.createElement("tr");
+        const tr = document.createElement("tr");
 
 
 
-        if (index === 0) {
+        if (index === 0) {
 
-          const semesterCell = document.createElement("td");
+          const semesterCell = document.createElement("td");
 
-          semesterCell.rowSpan = rows.length;
+          semesterCell.rowSpan = rows.length;
 
-          semesterCell.className = "semester-cell";
+          semesterCell.className = "semester-cell";
 
-          semesterCell.innerHTML = `<strong>${escapeHtml(semester)}</strong>`;
+          semesterCell.innerHTML = `<strong>${escapeHtml(semester)}</strong>`;
 
-          tr.appendChild(semesterCell);
+          tr.appendChild(semesterCell);
 
-        }
+        }
 
 
 
-        row.forEach((cell, cellIndex) => {
+        row.forEach((cell, cellIndex) => {
 
-          const td = document.createElement("td");
+          const td = document.createElement("td");
 
-          td.textContent = cell;
+          td.textContent = cell;
 
 
 
-          if (row[0] === "Semester total") {
+          if (row[0] === "Semester total") {
 
-            td.classList.add("semester-total");
+            td.classList.add("semester-total");
 
-          }
+          }
 
 
 
-          tr.appendChild(td);
+          tr.appendChild(td);
 
-        });
+        });
 
 
 
-        structureBody.appendChild(tr);
+        structureBody.appendChild(tr);
 
-      });
+      });
 
-    });
+    });
 
 
 
-    // Links
+    // Links
 
-    setSafeLink("applyBtn", CONFIG.applicationUrl);
+    setSafeLink("applyBtn", CONFIG.applicationUrl);
 
-    setSafeLink("calendar1", CONFIG.academicCalendar.sidang1);
+    setSafeLink("calendar1", CONFIG.academicCalendar.sidang1);
 
-    setSafeLink("calendar2", CONFIG.academicCalendar.sidang2);
+    setSafeLink("calendar2", CONFIG.academicCalendar.sidang2);
 
-    setSafeLink("timetable1", CONFIG.timetable.semester1);
+    setSafeLink("timetable1", CONFIG.timetable.semester1);
 
-    setSafeLink("timetable2", CONFIG.timetable.semester2);
+    setSafeLink("timetable2", CONFIG.timetable.semester2);
 
 
 
-    // Footer
+    // Footer
 
-    document.getElementById("lastUpdated").textContent = CONFIG.lastUpdated;
+    document.getElementById("lastUpdated").textContent = CONFIG.lastUpdated;
 
 
 
-    function setSafeLink(id, url){
+    function setSafeLink(id, url){
 
-      const el = document.getElementById(id);
+      const el = document.getElementById(id);
 
-      if (!url || url === "#") {
+      if (!url || url === "#") {
 
-        el.href = "#";
+        el.href = "#";
 
-        el.addEventListener("click", e => {
+        el.addEventListener("click", e => {
 
-          e.preventDefault();
+          e.preventDefault();
 
-          alert("Administrator: replace this placeholder with the official URL in CONFIG.");
+          alert("Administrator: replace this placeholder with the official URL in CONFIG.");
 
-        });
+        });
 
-      } else {
+      } else {
 
-        el.href = url;
+        el.href = url;
 
-      }
+      }
 
-    }
+    }
 
 
 
-    function escapeHtml(value){
+    function escapeHtml(value){
 
-      return String(value)
+      return String(value)
 
-        .replaceAll("&","&amp;")
+        .replaceAll("&","&amp;")
 
-        .replaceAll("<","&lt;")
+        .replaceAll("<","&lt;")
 
-        .replaceAll(">","&gt;")
+        .replaceAll(">","&gt;")
 
-        .replaceAll('"',"&quot;")
+        .replaceAll('"',"&quot;")
 
-        .replaceAll("'","&#039;");
+        .replaceAll("'","&#039;");
 
-    }
+    }
 
 
 
-  document.querySelectorAll('.navlinks a[href^="#"]').forEach(link => {
+  document.querySelectorAll('.navlinks a[href^="#"]').forEach(link => {
 
-  link.addEventListener('click', function(e) {
+  link.addEventListener('click', function(e) {
 
-    e.preventDefault();
+    e.preventDefault();
 
 
 
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(this.getAttribute('href'));
 
 
 
-    if (target) {
+    if (target) {
 
-      target.scrollIntoView({
+      target.scrollIntoView({
 
-        behavior: 'smooth',
+        behavior: 'smooth',
 
-        block: 'start'
+        block: 'start'
 
-      });
+      });
 
-    }
+    }
 
-  });
+  });
 
 });
 
-  </script>
+  </script>
 
 </body>
 
